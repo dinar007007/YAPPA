@@ -1,0 +1,45 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:YAAPA.ViewModels;assembly=YAAPA"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"        
+        Width="200"
+        Height="100"
+        x:Class="YAAPA.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="YAAPA"                
+        >
+    <!--<Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>-->
+    <StackPanel Orientation="Vertical">
+      <StackPanel Orientation="Horizontal">
+        <Button Content="{Binding StartButtonLabel}" Command="{Binding StartButtonAction}">          
+        </Button>
+        <Button IsVisible="False">Reset</Button>
+        <TextBlock Text="{Binding Timer}"></TextBlock>
+        <TextBlock>
+          Number tomatoes - 
+        </TextBlock>
+        <TextBlock Text="{Binding CountTomato}"></TextBlock>
+        <Button Command="{Binding OpenSettings}">Settings</Button>
+      </StackPanel>         
+      <!--<ItemsControl Items="{Binding Tomatoes}">
+        <ItemsControl.ItemsPanel>
+          <ItemsPanelTemplate>
+            <WrapPanel/>
+          </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+        <ItemsControl.ItemTemplate>
+          <DataTemplate>
+            <Button Content="{Binding Description}">                
+            </Button>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>-->
+      
+    </StackPanel>
+
+    
+
+</Window>
