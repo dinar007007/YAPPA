@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Text;
+using Avalonia.Controls;
 using Avalonia.Threading;
 using NetCoreAudio;
 using ReactiveUI;
 using SharpDX.Direct2D1;
 using YAAPA.Models;
 using YAAPA.Services;
+using YAPPA.Views;
 
 namespace YAAPA.ViewModels
 {
@@ -73,7 +75,8 @@ namespace YAAPA.ViewModels
 
         public void OpenSettings()
         {
-            Trace.WriteLine("Open settings");
+            var settingsWindow = new Settings();
+            settingsWindow.Show();
         }
 
     }
